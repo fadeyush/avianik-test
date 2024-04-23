@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/avianik-test/static/css/main.33c7669d.css",
+    "main.js": "/avianik-test/static/js/main.83270676.js",
+    "static/media/free-icon-search.svg": "/avianik-test/static/media/free-icon-search.44144c63f1114bd73433.svg",
+    "index.html": "/avianik-test/index.html",
+    "main.33c7669d.css.map": "/avianik-test/static/css/main.33c7669d.css.map",
+    "main.83270676.js.map": "/avianik-test/static/js/main.83270676.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33c7669d.css",
+    "static/js/main.83270676.js"
+  ]
+}
