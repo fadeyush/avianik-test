@@ -1,0 +1,34 @@
+.users__table {
+    margin: 50px 20px 0;
+}
+.users__searchWrapper {
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.users__search {
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.75);
+    padding-left: 30px;
+    
+    width: 300px;
+    height: 30px;
+}
+
+.users__searchIkon {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+
+    margin-right: 20px;
+
+    background-image: url('../../assets/img/free-icon-search.svg');
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+}
