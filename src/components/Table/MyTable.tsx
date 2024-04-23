@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { fetchUsers } from '../../store/action-creator/fetchUsers';
 import { MyTableProps, Order } from '../../types/table';
+import TableSortLabel from '@mui/material/TableSortLabel';
 
 export default function BasicTable() {
   const {users, isLoading, error} = useAppSelector(state => state.usersReducer);
@@ -94,10 +95,18 @@ export default function BasicTable() {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell className={classes.usersTable__head} align="center" onClick={createSortHandler('id')}>id</TableCell>
-                <TableCell className={classes.usersTable__head} align="center" onClick={createSortHandler('name')}>name</TableCell>
-                <TableCell className={classes.usersTable__head} align="center" onClick={createSortHandler('username')}>username</TableCell>
-                <TableCell className={classes.usersTable__head} align="center" onClick={createSortHandler('email')}>email</TableCell>
+                <TableCell align='left'>
+                  <TableSortLabel active={orderBy === 'id'}  direction={orderBy === 'id' ? order : 'asc'} className={classes.usersTable__head} onClick={createSortHandler('id')}>id</TableSortLabel>
+                </TableCell>
+                <TableCell>
+                  <TableSortLabel active={orderBy === 'name'}  direction={orderBy === 'name' ? order : 'asc'} className={classes.usersTable__head} onClick={createSortHandler('name')}>name</TableSortLabel>
+                </TableCell>
+                <TableCell>
+                  <TableSortLabel active={orderBy === 'username'}  direction={orderBy === 'username' ? order : 'asc'} className={classes.usersTable__head} onClick={createSortHandler('username')}>username</TableSortLabel>
+                </TableCell>
+                <TableCell>
+                  <TableSortLabel active={orderBy === 'email'}  direction={orderBy === 'email' ? order : 'asc'} className={classes.usersTable__head} onClick={createSortHandler('email')}>email</TableSortLabel>
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -106,12 +115,12 @@ export default function BasicTable() {
                   key={row.name}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell align="center" component="th" scope="row">
+                  <TableCell align="left" component="th" scope="row">
                     {row.id}
                   </TableCell>
-                  <TableCell align="center">{row.name}</TableCell>
-                  <TableCell align="center">{row.username}</TableCell>
-                  <TableCell align="center">{row.email}</TableCell>
+                  <TableCell align="left">{row.name}</TableCell>
+                  <TableCell align="left">{row.username}</TableCell>
+                  <TableCell align="left">{row.email}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
