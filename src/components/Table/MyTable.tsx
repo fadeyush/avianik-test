@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import classes from './Table.module.scss';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -19,7 +19,7 @@ export default function BasicTable() {
   const [orderBy, setOrderBy] = React.useState<keyof MyTableProps>('id');  
   const [order, setOrder] = React.useState<Order>('asc');
  
-  React.useEffect(()=> {
+  useEffect(()=> {
     dispatch(fetchUsers())
   }, [])
 
