@@ -4,3 +4,5 @@ export interface MyTableProps {
     username: string;
     email: string;
 }
+
+export type Order = 'asc' | 'desc';
